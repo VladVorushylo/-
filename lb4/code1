@@ -1,0 +1,14 @@
+import numpy as np
+
+print("Матриця А")
+matrixA = np.array([[2, 3, 1], [-1, 1, 0], [1, 2, -1]])
+print(matrixA)
+print("Матриця B")
+matrixB = np.array([[1, 2, 1], [0, 1, 2], [3, 1, 1]])
+print(matrixB)
+
+matrixAB = matrixA.dot(matrixB)
+matrixBA = matrixB.dot(matrixA)
+print("Матриця AB-BA")
+difference = matrixAB - matrixBA
+print(difference)
