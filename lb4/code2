@@ -1,0 +1,9 @@
+import numpy as np
+
+print("Матриця А")
+matrix = np.array([[-1, 0, 2], [0, 1, 0], [1, 2, -1]])
+print(matrix)
+
+print("Матриця А^2")
+a = matrix ** 2
+print(a)
