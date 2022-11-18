@@ -1,0 +1,11 @@
+import numpy as np
+
+print("Матриця А")
+matrixA = np.array([[3, -5, 3], [1, 2, 1], [2, 7, -1]])
+print(matrixA)
+print("Матриця B")
+matrixB = np.array([[1], [4], [8]])
+print(matrixB)
+invA = np.linalg.inv(matrixA)
+x = invA.dot(matrixB)
+print("X = ", x)
