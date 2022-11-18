@@ -1,0 +1,12 @@
+import numpy as np
+
+print("Матриця А")
+matrixA = np.array([[3, 5], [6, -1]])
+print(matrixA)
+print("Матриця B")
+matrixB = np.array([[2, 1], [-3, 2]])
+print(matrixB)
+
+print("Добуток матриць")
+dob = matrixA.dot(matrixB)
+print(dob)
