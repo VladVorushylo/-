@@ -1,0 +1,12 @@
+import numpy as np
+import random
+
+n = int(input("n = "))
+m = int(input("m = "))
+print("matrix")
+a = np.array([[random.randint(1, 11) for j in range(n)] for i in range(m)])
+print(a)
+print("Середні значення рядків")
+print(np.mean(a, axis = 1))
+print("Середні значення стовпців")
+print(np.mean(a, axis = 0))
