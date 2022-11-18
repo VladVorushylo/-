@@ -1,0 +1,12 @@
+import numpy as np
+import matplotlib.pyplot as plt
+x = [0.115, 0.120, 0.125, 0.130, 0.135, 0.140, 0.145]
+y = [8.6572, 8.2932, 7.9582, 7.6489, 7.3623, 7.0961]
+xf = np.linspace(np.min(x), np.max(x))
+yf = np.linspace(np.min(y), np.max(y))
+plt.plot(xf, yf)
+plt.title("Графік")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.grid()
+plt.show()
