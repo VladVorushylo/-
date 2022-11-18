@@ -1,0 +1,31 @@
+from math import factorial
+x = [0.115, 0.120, 0.125, 0.130, 0.135, 0.140, 0.145]
+y = [8.6572, 8.2932, 7.9582, 7.6489, 7.3623, 7.0961]
+h = x[1] - x[0]
+x1 = 0.122
+x2 = 0.146
+q1 = (x1 - x[0])/h
+q2 = (x2-x[-1])/h
+def n(y, j):
+    mas = []
+    for i in range(len(y)):
+        mas.append(y[i] - y[i-1])
+    mas.pop(0)
+    if j == 1:
+        return mas
+    else:
+        j -= 1
+        return n(mas, j)
+print("h = ", h)
+s1 = y[0] + q1 * n(y, 1)[0] + q1 * (q1 - 1) * n(y, 2)[0] / factorial(2)
+s2 = q1 * (q1 - 1) * (q1 - 2) * n(y, 3)[0] / factorial(3)
+s3 = q1 * (q1 - 1) * (q1 - 2) * (q1 - 3) * n(y, 4)[0] / factorial(4)
+s4 = q1 * (q1 - 1) * (q1 - 2) * (q1 - 3) * (q1 - 4) * n(y, 5)[0] / factorial(5)
+n1 = s1 + s2 + s3 + s4
+print("Перша інтерполяційна формула Ньютона = ", round(n1, 5))
+t1 = y[5] + q2 * n(y, 1)[4] + q2 * (q2 + 1) * n(y, 2)[3] / factorial(2)
+t2 = q2 * (q2 + 1) * (q2 + 2) * n(y, 3)[2] / factorial(3)
+t3 = q2 * (q2 + 1) * (q2 + 2) * (q2 + 3) * n(y, 4)[1] / factorial(4)
+t4 = q2 * (q2+1) * (q2+2) * (q2 + 3) * (q2 + 4) * n(y, 4)[1] / factorial(5)
+n2 = t1+t2+t3+t4
+print("Друга інтерполяційна формула Ньютона = ", round(n2,5))
