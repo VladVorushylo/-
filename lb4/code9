@@ -1,0 +1,12 @@
+import numpy as np
+
+print("Матриця А")
+a = np.array([[3, -5, 3], [1, 2, 1], [2, 7, -1]])
+print(a)
+print("Матриця B")
+b = np.array([[1], [4], [8]])
+print(b)
+
+print("Перевірка методом solve")
+x = np.linalg.solve(a, b)
+print(x)
